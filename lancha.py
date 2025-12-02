@@ -41,7 +41,7 @@ class Lancha(Embarcacion):
             Lancha.__num_lanchas += 1
             nombre_auto = f"Lancha {Lancha.__num_lanchas}"
 
-            # llamar al constructor de la superclase
+            # llamo al constructor de la superclase
             super().__init__(nombre_auto, Embarcacion.MIN_TRIPULANTES)
 
             # atributos propios de lancha
@@ -97,7 +97,6 @@ class Lancha(Embarcacion):
         return cls.__num_lanchas_navegando
 
     # Método set_rumbo
-
     def set_rumbo(self, nuevo_rumbo):
         # control extra de la subclase
         if nuevo_rumbo is None:
@@ -116,7 +115,6 @@ class Lancha(Embarcacion):
         super().set_rumbo(nuevo_rumbo)
 
     # Método iniciar_navegación
-
     def iniciar_navegacion(self, velocidad, rumbo, patron, num_tripulantes):
         # Validaciones adicionales de Lancha:
 
@@ -164,7 +162,6 @@ class Lancha(Embarcacion):
         Lancha.__num_lanchas_navegando -= 1
 
     # Señalizar
-
     def señalizar(self):
         print(
             f"AVISO de señalización de la lancha {self.get_nombre_barco()} "
@@ -172,7 +169,6 @@ class Lancha(Embarcacion):
         )
 
     # Método __str__
-
     def __str__(self):
         base = super().__str__()
         return (
