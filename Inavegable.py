@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class Inavegable(ABC):
+class INavegable(ABC):
 
     @abstractmethod
     def iniciar_navegacion(self):
