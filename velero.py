@@ -36,6 +36,5 @@ class Velero(Embarcacion):
     def get_num_mastiles(self):
         return self.__num_mastiles
     
-    # Setters 
-     
+    # ---Setters--- 
        
