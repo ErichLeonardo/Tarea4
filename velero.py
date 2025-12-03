@@ -14,7 +14,7 @@ class Velero(Embarcacion, IRegateable):
 
     # Constructor
     def __init__(
-        self, nombre=None, num_max_tripulantes=None, num_mastiles=NUM_MASTILES
+        self, nombre=None, num_max_tripulantes=None, num_mastiles=None
     ):
         # Constructor sin parámetros
         if nombre is None and num_mastiles is None and num_max_tripulantes is None:
@@ -32,7 +32,7 @@ class Velero(Embarcacion, IRegateable):
                 raise ValueError(
                     f"El número de mástiles debe estar entre {Velero.NUM_MASTILES_MIN} y {Velero.NUM_MASTILES_MAX}."
                 )
-            Velero.num_veleros += 1
+            Velero.__num_veleros += 1
 
         # Llamada al constructor base
         super().__init__(nombre, num_max_tripulantes)
@@ -48,6 +48,9 @@ class Velero(Embarcacion, IRegateable):
         return self.__num_mastiles
 
     # ---Setters---
+   
+    def set_num_mastiles(self, num_mastiles:int):
+        self.__num_mastiles = num_mastiles
 
     # Metodos de la superclase
     def set_rumbo(self, nuevo_rumbo):

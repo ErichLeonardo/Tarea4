@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
-from INavegable import INavegable
+from Inavegable import INavegable
 
-class Embarcacion(ABC, INavegable):
+class Embarcacion(INavegable, ABC):
     # Atributos de clase (solo accesibles desde Embarcacion)
     __num_barcos = 0
     __num_barcos_navegando = 0
